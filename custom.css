@@ -13,12 +13,8 @@ img {
   width: 30px;
 }
 
-a:link, a:hover {
-    color: #d9534f;
-}
-
-a:visited, a:active {
-    color: #000000;
+a {
+  color: #000000;
 }
 
 .countdown {
@@ -65,4 +61,12 @@ a:visited, a:active {
   display: block;
   padding-top: 40px;
   color: #000000;
+}
+
+#smallSession, #bigSession, #smallBreak, #bigBreak {
+  font-size: 40px;
+}
+
+#sessionTime, #breakTime {
+  font-size: 30px;
 }
