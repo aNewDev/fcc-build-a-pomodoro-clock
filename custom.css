@@ -6,7 +6,23 @@ html {
 body {
   padding-bottom: 60px;
   padding-top: 20px;
-  font-family: sans-serif;
+  font-family: 'Gloria Hallelujah', sans-serif;
+}
+
+img {
+  width: 30px;
+}
+
+a:link, a:hover {
+    color: #d9534f;
+}
+
+a:visited, a:active {
+    color: #000000;
+}
+
+.countdown {
+  width: 200px;
 }
 
 .footer {
@@ -14,9 +30,39 @@ body {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #f5f5f5;
+}
+
+.progress {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .text-muted {
   margin: 20px 0;
+  color: #000000;
+}
+
+#countdownCount {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  position: absolute;
+  font-family: 'Anton', sans-serif;
+  font-size: 70px;
+  display: block;
+  padding-top: 50px;
+  color: #000000;
+}
+
+#sessionName {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  position: absolute;
+  font-size: 20px;
+  display: block;
+  padding-top: 40px;
+  color: #000000;
 }

@@ -25,40 +25,65 @@
   <link rel="stylesheet" type="text/css" href="custom.css">
 
   <!-- link to google font -->
-
+  <link href="https://fonts.googleapis.com/css?family=Anton|Gloria+Hallelujah" rel="stylesheet">
 
 </head>
 
 <body>
 
+  <!-- link to timer complete sound -->
+  <audio id="myAudio">
+    <source src="https://s3.amazonaws.com/assetsanewdevio/fccpomodoro/timer.wav" type="audio/wav">
+  </audio>
+
   <div class="container" align="center">
 
-    <!-- Session length contorls -->
-    <div class="session">
-      <p>Session Length</p>
-      <p><a id="smallSession" href="">-</a> <span id="sessionTime">25</span> <a id="bigSession" href="">+</a></p>
+    <!-- header -->
+    <div class="row">
+        <h1><font color="#d9534f" id="header">Pomodoro Timer</font></h1>
     </div>
 
-    <!-- Break length contorls -->
-    <div class="break">
-      <p>Break Length</p>
-      <p><a id="smallBreak" href="">-</a> <span id="breakTime">5</span> <a id="bigBreak" href="">+</a></p>
+    <!-- timer controls -->
+    <div class="row">
+      <div class="col-xs-3">
+      </div>
+      <!-- session length contorls -->
+      <div class="col-xs-3" id="sessionSet">
+        <p>Session Length</p>
+        <p><a id="smallSession" href="">-</a> <span id="sessionTime">25</span> <a id="bigSession" href="">+</a></p>
+      </div>
+      <!-- break length contorls -->
+      <div class="col-xs-3" id="breakSet">
+        <p>Break Length</p>
+        <p><a id="smallBreak" href="">-</a> <span id="breakTime">5</span> <a id="bigBreak" href="">+</a></p>
+      </div>
+      <div class="col-xs-3">
+      </div>
     </div>
 
-    <!-- Countdown area -->
+    <!-- timer and status button -->
     <div class="countdown">
-      <p>Countdown</p>
-      <p>25:00</p>
+      <a id="countDownBox" href="#">
+        <!-- time remaining -->
+        <span id="countdownCount">25:00</span>
+        <!-- current session -->
+        <span id="sessionName">Push to start</span>
+        <!-- button and progress -->
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;" id="bar">
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- tomatoes appear after every completed session -->
+    <div class="row" id="tomato">
     </div>
 
   </div>
 
-
-
-
-
   <!-- footer -->
-  <footer class="footer text-center">
+  <footer class="footer text-center" style="background-color:#d9534f" id="footer">
     <p class="text-muted">Built with much angst and learning by <a href="https://aNewDev.io" target="_blank">aNewDev</a> while completing <a href="https://freecodecamp.com" target="_blank">freeCodeCamp</a>.</p>
   </footer>
 
